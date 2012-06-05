@@ -1,0 +1,36 @@
+#mainbody {
+	width: 95%;
+	margin:0px auto;
+	text-align: left;
+}
+body {
+	font-family: Calibri, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111;
+	background-color: #FFF;
+}
+#title {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333;
+	font-size: 14px;
+	font-weight: bold;
+}
+.success {
+	color: #060;
+	padding: 5px;
+	margin: 20px;
+	background-color: #C4FDB3;
+	border: 1px solid #060;
+}
+.failed {
+	color: #C00;
+	padding: 5px;
+	margin: 20px;
+	background-color: #FFB9B9;
+	border: 1px solid #C00;
+}
+
+#footer { margin-top: 20px; padding: 5px; 
+	border-top: 1px dotted #9f9f9f;	color: #333;
+	font-size: .9em; }

@@ -1,0 +1,6 @@
+<h3>Personal social networks</h3>
+<p>In this part of the study, we would like you to tell us about the important people in your personal social network. In a nutshell, your personal social network consists of everyone you have some sort of social relationship with, including your family, friends, teammates, coworkers, and so on.</p>
+<p>From time to time, most people discuss important personal matters with other people, for instance if they have problems at work, at school, with their romantic partner, parents, or other similar situations.</p>
+<p>For this first set of questions, you'll be asked to provide the names of these important people. Many people already have a large proportion of their social networks listed on sites like Facebook. To speed up the process of describing your social network, we can import the list of your Facebook Friends. After you select your important Facebook contacts, you can fill in the gaps by manually adding the people who aren't on Facebook (like Grandma and your Great-Auntie Eugenia, unless they are really hip). When adding contacts, try to be as thorough as possible.</p> 
+
+<a href="<?=LINK_BASE?>/InternalFriendManager/scan" title="continue" class="next">Click here to continue.</a>

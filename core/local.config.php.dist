@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * This is the local configuration file
+ *
+ * You can add any additional modules at the bottom
+ * This file won't be modified/touched by future versions
+ * of the framework. You can override Config settings from
+ * app.config.php from here
+ *
+ */
+
+
+define('DBASE_USER', '');
+define('DBASE_PASS', '');
+define('DBASE_NAME', '');
+define('DBASE_SERVER', '');
+define('DBASE_TYPE', 'mysql');
+define('TABLE_PREFIX', '');
+
+Config::Add('SITE_NAME', 'PASN Site Name');
+Config::Add('SITE_URL', 'http://site.url');
+Config::Add('LINK_BASE','http://site.url/index.php');
+
+
+/**
+ * The API module include goes here. This is the module that handles
+ * authentication and friends provision from whatever Social API you use.
+ * By default, PASN uses a FacebookAPI class. This class should implement 
+ * the SocialAPIInterface. See /core/common/SocialAPIInterface.class.php
+ */
+
+/**
+ * The class name of your SocialAPI module
+ */
+Config::Add('SOCIAL_API_MODULE','FacebookAPI');
+/**
+ * Additional configuration for your SocialAPI module. 
+ * You may put custom variables here if needed.
+ */
+Config::Add('SOCIAL_API_KEY','');
+Config::Add('SOCIAL_API_SECRET_KEY','');
+
+/**
+ * List modules here which require authentication to your third party social API. 
+ * Format: array('module_name'[,'module_name', ...])
+ * The modules listed here will call Authenticate() of whatever 
+ * class you define that implements the SocialAPIInterface.
+ */
+
+Config::Add('AUTH_REQUIRED_MODULES', 
+	array('Dashboard','InternalFriendManager','Admin','SurveySubmissionInfo','EdgeFinder')
+);
+
+/**
+ * List of authorized users' emails that can access the Admin panel.
+ * Only users logged in through Facebook/other social API with this email
+ * will be able to see the admin panel.
+ */
+Config::Add('ADMIN_USERS',
+	array('admin@admin')
+);
+
+/**
+ * The default buckets that the user should start out with. The user can categorize
+ * alters into buckets, and these buckets will be provided to them by default.
+ * The user can add more buckets as they see fit for further categorization.
+ * 
+ * Leave as a blank array if you wish to have no default buckets. 
+ */
+Config::Add('DEFAULT_BUCKETS',
+	array(
+		'family',
+		'high_school',
+		'college',
+		'work',
+		'activity',
+		'other',
+		'unsorted')
+);
+
+/**
+ * Whether or not to gather information on their external alters' network -- typically
+ * you should do this once and then never again. This will enable alterselect questions
+ * for EACH of their external alters to the effect of, "Who does XXX know?" and will fill
+ * in the `network` field of the alters table.
+ */
+Config::Add('GATHER_EXT_NETWORK_LINKS', true);
+
+/**
+ * The rules for which questions to display in what order. This is an array of
+ * question_id's -- any alphanumeric string <= 45 characters in length.
+ * 
+ * These question_id's match up to the question_id of the question in the survey_questions
+ * table in the database.
+ * 
+ * The question_id's are shown in order. You may have wildcards in the question_id, 
+ * in which case PASN will randomly present those questions that satisfy the wildcard
+ * until there are none left. Then it will move on to the next rule.
+ * 
+ * Example: array('INFO_QUESTION','DEMOGRAPHIC_*', 'EXIT_QUESTION')
+ * Will show the question INFO_QUESTION first, then show all questions satisfying pattern
+ * 'DEMOGRAPHIC_*' in a random order, and then EXIT_QUESTION. 
+ * 
+ * Any wildcard will ignore the text 'INSTR' as a satisfying string for the wildcard.
+ * For example, "DEMOGRAPHIC_INSTR" will not satisfy the pattern "DEMOGRAPHIC_*".
+ * This is to ensure that instructional text only shows once.
+ */
+Config::Add('QUESTION_DISPLAY_RULES',
+	array(
+		'INSTR'
+	)
+);
+// DEBUG
+//Config::Set('QUESTION_DISPLAY_RULES',array('LONE_1'));
+
+/**
+ * Number of questions to display per page by default.
+ */
+Config::Add('QUESTION_DISPLAY_AMT', 10);
+
+/**
+ * Whether or not to close the survey. If the survey is closed, the closed message will show.
+ */
+Config::Add('SURVEY_CLOSED',false);
+Config::Add('SURVEY_CLOSED_MESSAGE',
+	"We're sorry, but the survey is closed for now! Please come back when instructed to complete the next wave of the survey!"
+);
+
+
+// ------------------- End configuration: no need to edit below this line. ----------------
+
+
+?>

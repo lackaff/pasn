@@ -1,0 +1,135 @@
+#message {
+	width: 90%;
+	height: 40px;
+	padding: 3px;
+	margin: 4px; 
+	background-color: #F1FFCF;
+	border: 2px #FFF;
+	text-align: center;	
+}
+
+#leftcontent {
+	width: 66%;
+	float: left;
+}
+
+#sidebar {
+	width: 33%;
+	float: left;
+	position: absolute;
+	top: 100;
+	right: 10;	
+}
+
+
+/* INTERNAL FRIEND MANAGER */
+
+#internalFriendManagerHeader {
+	width: 100%;
+	float; left;
+	top: 5;
+	}
+
+#bucket_list {
+	list-style-type: none;	
+}
+.bucket_label {
+	float: left;	
+	height: 100px;
+	width: 100px;
+	background-color: #AAA;
+	padding: 3px;
+	margin: 4px;
+	border: 2px solid #000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.bucket_label_hover {
+/*	border: 3px solid #039; */
+background-color: #FFF;	
+}
+
+#new_friend_list{
+	list-style-type: none;
+}
+.new_friend_entry {
+/*	height: 70px;
+	background-color: #709CCB;
+	padding: 3px;
+	margin: 4px;
+	
+	font-weight: bold;
+	text-align: center;
+	color: #eee; */
+	float: left;
+	width: 70px;
+   	height: 70px;
+ 	margin: 2px;
+   	padding: 4px;
+	background-color: #709CCB; 
+	border: 2px solid #000;
+	font-size: 10px;	
+	text-align: center;
+	color: #eee;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* SURVEY */
+.alterselectsubmit, .networkalterselectsubmit {
+	width: 50%; 
+	background-color: #F7F8FC;
+	color: #333;
+	text-align: center;
+	border: 2px solid #709CCB;
+	width: 500px ;
+    margin-left: auto ;
+    margin-right: auto ;
+
+}
+.alterselectsubmit_hover, .networkalterselectsubmit_hover {
+	border: 2px solid #507AA0;
+	background-color: #D5D6DA;
+}
+
+.alterBucketBox{
+    width: 80%;
+    list-style-type: none;
+}
+.alterBucket {
+	border: 1px solid #83B87C;
+    background-color: #A7C5BD;
+   	width: 100%;
+	padding: 5px;
+    margin  : 5px;
+	display: block;
+	text-align: right;
+    text-decoration: none;
+    color: #222;
+}
+.alterBucketBox_activeheader {
+	background-color: #C8F5E9;
+	font-weight: bold;
+}
+
+.alterBucketBox div {
+	float: left; 
+	height: 300px;
+}
+
+.alter{
+	float: left;
+	width: 70px;
+   	height: 70px;
+ 	margin: 2px;
+   	padding: 4px;
+	background-color: #709CCB; 
+	border: 2px solid #000;    	
+/*	font-weight: bold; */
+	font-size: 10px;	
+	text-align: center;
+	color: #eee;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
